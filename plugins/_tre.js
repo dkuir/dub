@@ -6,7 +6,7 @@ you may not use this file except in compliance with the License.
 RAVANA - RAVANA - SL
 */
 
-const RAVANA = require('../events');
+const Trex = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 
@@ -15,10 +15,10 @@ const Lang = Language.getString('_trex');
 
 if (Config.WORKTYPE == 'private') {
 
-    RAVANA.addCommand({pattern: 'trex ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    Trex.addCommand({pattern: 'trex ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -47,7 +47,7 @@ if (Config.WORKTYPE == 'private') {
         );    
     } else {
         var CMD_HELP = '';
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -80,10 +80,10 @@ if (Config.WORKTYPE == 'private') {
 }));
 
 /*slf*/
-RAVANA.addCommand({pattern: 'help ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+Trex.addCommand({pattern: 'help ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -112,7 +112,7 @@ RAVANA.addCommand({pattern: 'help ?(.*)', fromMe: true, dontAddCommandList: true
         );    
     } else {
         var CMD_HELP = '';
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -146,10 +146,10 @@ RAVANA.addCommand({pattern: 'help ?(.*)', fromMe: true, dontAddCommandList: true
 }
 else if (Config.WORKTYPE == 'public') {
 
-    RAVANA.addCommand({pattern: 'trex ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+    Trex.addCommand({pattern: 'trex ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -178,7 +178,7 @@ else if (Config.WORKTYPE == 'public') {
         );    
     } else {
         var CMD_HELP = '';
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -211,10 +211,10 @@ else if (Config.WORKTYPE == 'public') {
 }));
 
 /*RAVANA*/
-RAVANA.addCommand({pattern: 'phelp ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Trex.addCommand({pattern: 'phelp ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
     var CMD_HELP = '';
     if (match[1] === '') {
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
@@ -243,7 +243,7 @@ RAVANA.addCommand({pattern: 'phelp ?(.*)', fromMe: false, dontAddCommandList: tr
         );    
     } else {
         var CMD_HELP = '';
-        RAVANA.commands.map(
+        Trex.commands.map(
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
